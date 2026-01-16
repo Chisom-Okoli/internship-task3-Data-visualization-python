@@ -28,10 +28,13 @@ Python project demonstrating basic data visualization of the Iris dataset with b
 
 ## Plots and Visualizations
 
-### 1. Bar Plot
+### 1. Bar Chart
 **Name:** Count of Iris Species  
+
 **Description:** Shows the number of samples for each species in the dataset.  
+
 **Objective:** Visualize the distribution of categorical data (*species*).  
+
 **Findings:** All three species have equal representation (50 samples each).  
 
 ```python
@@ -43,11 +46,17 @@ plt.tight_layout()
 plt.savefig("bar_plot.png")
 plt.show()
 ```
-## 2. Line Chart
-Name: Sepal Length Across Samples
-Description: Plots sepal length of all samples in order of their index.
-Objective: Identify trends or patterns in a numeric feature (sepal_length).
-Possible Findings: Sepal lengths vary across samples; no unusual outliers observed.
+![Bar Plot](https://github.com/Chisom-Okoli/internship-task3-Data-visualization-python/blob/main/Bar%20chart.png)
+
+### 2. Line Chart
+**Name:** Sepal Length Across Samples 
+
+**Description:** Plots sepal length of all samples in order of their index. 
+
+**Objective:** Identify trends or patterns in a numeric feature (sepal_length). 
+
+**Findings:** Sepal lengths vary across samples; no unusual outliers observed. 
+
 ```python
 plt.plot(df.index, df['sepal_length'], marker='o', linestyle='-', color='blue')
 plt.title("Sepal Length Across Samples")
@@ -56,14 +65,19 @@ plt.ylabel("Sepal Length")
 plt.tight_layout()
 plt.savefig("line_chart.png")
 plt.show()
-
 ```
-## 3. Scatter Plot
+![Line Chart](https://github.com/Chisom-Okoli/internship-task3-Data-visualization-python/blob/main/Line%20Chart.png)
 
-Name: Sepal Length vs Petal Length
-Description: Plots the relationship between sepal length and petal length, with points colored by species.
-Objective: Visualize correlations between two numeric features and compare species.
-Possible Findings: Clear clusters for each species; strong positive correlation between sepal length and petal length.
+### 3. Scatter Plot
+
+**Name:** Sepal Length vs Petal Length.
+
+**Description:** Plots the relationship between sepal length and petal length, with points colored by species.
+
+**Objective:** Visualize correlations between two numeric features and compare species.
+
+**Findings:** Clear clusters for each species; strong positive correlation between sepal length and petal length.
+
 ```python
 sns.scatterplot(data=df, x='sepal_length', y='petal_length', hue='species', palette='deep')
 plt.title("Sepal Length vs Petal Length")
@@ -74,6 +88,8 @@ plt.tight_layout()
 plt.savefig("scatter_plot.png")
 plt.show()
 ```
+![Scatter Plot](https://github.com/Chisom-Okoli/internship-task3-Data-visualization-python/blob/main/Scatter%20plot.png)
+
 ## Observations
 - Bar plot confirms equal distribution of species.
 - Line chart shows trends in sepal length across samples.
